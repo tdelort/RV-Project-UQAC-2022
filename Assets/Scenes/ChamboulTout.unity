@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 263756145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b35bfe9c5f50fc04e936c561f387b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 294972069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b35bfe9c5f50fc04e936c561f387b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 317047816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b35bfe9c5f50fc04e936c561f387b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 497543685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b35bfe9c5f50fc04e936c561f387b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 762161435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b35bfe9c5f50fc04e936c561f387b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -2486,7 +2486,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186735695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: b35bfe9c5f50fc04e936c561f387b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -3031,6 +3031,18 @@ PrefabInstance:
     - target: {fileID: 1402132427219622974, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_Name
       value: PlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427379589916, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427379589916, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: fadeColor.a
+      value: 0.23921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132428924864724, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: usePositionTracking
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 823e69c154141524798063120f291f74, type: 3}
