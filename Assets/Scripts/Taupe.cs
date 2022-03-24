@@ -18,7 +18,10 @@ public class Taupe : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GetComponentInParent<GestionTaupes>().AddScore(1);
-        gameObject.SetActive(false);
+        if (other.CompareTag("Marteau"))
+        {
+            GetComponentInParent<GestionTaupes>().AddScore(1);
+            gameObject.SetActive(false);
+        }
     }
 }
