@@ -14,10 +14,6 @@ public class GestionTaupes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i= 0; i < taupeArray.Length; i++)
-        {
-            taupeArray[i].gameObject.SetActive(false);
-        }
         StartCoroutine(SpanwTaupe());
     }
 
@@ -25,11 +21,11 @@ public class GestionTaupes : MonoBehaviour
     {
         for(int i = 0; i < spawnMax; i++)
         {
+            yield return new WaitForSeconds(timeRespawn);
             int taupe = Random.Range(0, taupeArray.Length - 1);
             taupeArray[taupe].gameObject.SetActive(true);
             yield return new WaitForSeconds(timeActive);
             taupeArray[taupe].gameObject.SetActive(false);
-            yield return new WaitForSeconds(timeRespawn);
         }
     }
 
