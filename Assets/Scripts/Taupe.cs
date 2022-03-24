@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Taupe : MonoBehaviour
 {
-    [SerializeField] private Vector3 initialPosition;
+    private Vector3 initialPosition;
     private float time;
+
+    private void Awake()
+    {
+        initialPosition = transform.position;
+        gameObject.SetActive(false);
+    }
 
     private void OnEnable()
     {
