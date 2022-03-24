@@ -724,7 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 6655351119421830905, guid: 87878c5e2a806b6408baf7c37cdf756b, type: 3}
   ballSpeed: 5
-  fireDirection: {x: 0, y: 0.25, z: 1}
+  fireDirection: {x: 0, y: 0, z: 1}
 --- !u!1 &1569710759
 GameObject:
   m_ObjectHideFlags: 0
