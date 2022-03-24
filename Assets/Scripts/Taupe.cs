@@ -15,7 +15,7 @@ public class Taupe : MonoBehaviour
 
     private void OnEnable()
     {
-        transform.localPosition = initialPosition;
+        transform.position = initialPosition;
         time = 0;
     }
 
@@ -35,6 +35,7 @@ public class Taupe : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("ok");
         if (other.CompareTag("Marteau"))
         {
             GetComponentInParent<GestionTaupes>().AddScore(1);

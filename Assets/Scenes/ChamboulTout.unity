@@ -3028,37 +3028,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1402132427219622946, guid: 823e69c154141524798063120f291f74, type: 3}
-      propertyPath: HeightOffset
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402132427219622972, guid: 823e69c154141524798063120f291f74, type: 3}
-      propertyPath: m_Radius
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 1402132427219622974, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_Name
       value: PlayerController
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402132427379589916, guid: 823e69c154141524798063120f291f74, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402132427379589916, guid: 823e69c154141524798063120f291f74, type: 3}
-      propertyPath: fadeColor.a
-      value: 0.23921569
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402132428924864724, guid: 823e69c154141524798063120f291f74, type: 3}
-      propertyPath: _trackingOriginType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402132428924864724, guid: 823e69c154141524798063120f291f74, type: 3}
-      propertyPath: usePositionTracking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402132428924864725, guid: 823e69c154141524798063120f291f74, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 823e69c154141524798063120f291f74, type: 3}
