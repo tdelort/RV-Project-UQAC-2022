@@ -5,7 +5,7 @@ using UnityEngine;
 public class GestionTaupes : MonoBehaviour
 {
     [SerializeField] private Taupe[] taupeArray;
-    [SerializeField] private int spanwMax;
+    [SerializeField] private int spawnMax;
     [SerializeField] private int timeActive;
     [SerializeField] private int timeRespawn;
 
@@ -23,7 +23,7 @@ public class GestionTaupes : MonoBehaviour
 
     IEnumerator SpanwTaupe()
     {
-        for(int i = 0; i < spanwMax; i++)
+        for(int i = 0; i < spawnMax; i++)
         {
             int taupe = Random.Range(0, taupeArray.Length - 1);
             taupeArray[taupe].gameObject.SetActive(true);
