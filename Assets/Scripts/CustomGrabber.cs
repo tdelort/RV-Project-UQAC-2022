@@ -100,4 +100,9 @@ public class CustomGrabber : OVRGrabber
             }
         }
     }
+
+    public void EndGrab()
+    {
+        GrabEnd();
+    }
 }
