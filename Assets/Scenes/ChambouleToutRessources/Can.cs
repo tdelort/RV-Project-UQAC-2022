@@ -6,9 +6,9 @@ namespace ChamboulTout
 {
     public class Can : MonoBehaviour
     {
-        void OnTriggerEnter(Collider other)
+        void OnCollisionEnter(Collision collision)
         {
-            if(other.gameObject.tag == "Ball")
+            if(collision.gameObject.tag == "Ball")
             {
                 //TODO : play sound
             }
