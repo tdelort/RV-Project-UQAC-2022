@@ -4,23 +4,38 @@ using UnityEngine;
 
 public class EviteBalleMinigame : MonoBehaviour
 {   
-    private const float minigameDuration = 20f;
+    [SerializeField]
+    private float minigameDuration = 20f;
 
     [SerializeField]
-    private BallThrower ballThrower;
-    void StartMiniGame() {
-        ballThrower.StartShooting();
-        StartCoroutine(EndMiniGame());
-    }
+    private BallThrower[] ballThrower;
 
-    IEnumerator EndMiniGame()
-    {   
-        yield return new WaitForSeconds(minigameDuration);
-        ballThrower.StopShooting();
-    }
+    [SerializeField]
+    private TMPro.TMP_Text timerDisplay;
 
-    void Start()
+
+    IEnumerator Start()
     {
-        StartMiniGame();
+        // small 3 2 1
+        timerDisplay.text = "3";
+        yield return new WaitForSeconds(1f);
+        timerDisplay.text = "2";
+        yield return new WaitForSeconds(1f);
+        timerDisplay.text = "1";
+        yield return new WaitForSeconds(1f);
+
+
+        for(int i = 0; i < ballThrower.Length; i++)
+            ballThrower[i].StartShooting();
+
+        for(float time = 0; time < minigameDuration; time += Time.deltaTime)
+        {
+            timerDisplay.text = (minigameDuration - time).ToString("0.00");
+            yield return null;
+        }
+        timerDisplay.text = "0.00";
+
+        for(int i = 0; i < ballThrower.Length; i++)
+            ballThrower[i].StopShooting();
     }
 }

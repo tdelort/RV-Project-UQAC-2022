@@ -14,28 +14,22 @@ public class Ball : MonoBehaviour
 
     public Counter counter;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        Destroy(gameObject, destructionTime);
+        yield return new WaitForSeconds(destructionTime);
+        Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    void OnDestroy() {
-        if(!hasTriggered) {
-            counter.Increment();
-        }
-    }
-
-    void OnCollisionEnter(Collision collision){
+        Debug.Log("Collision");
         GetComponent<Rigidbody>().useGravity = true;
-        if (collision.gameObject.name == "PlayerController"){
+        if (!hasTriggered && collision.gameObject.CompareTag("Player")) 
+        {
+            Debug.Log("Collision with player");
             hasTriggered = true;
             impactSound.Play();
+            counter.Increment();
         }
     }
 }

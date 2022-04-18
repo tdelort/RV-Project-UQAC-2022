@@ -14,6 +14,12 @@ public class BallThrower : MonoBehaviour
     private float INTERVAL = 3f;
 
     [SerializeField]
+    private float delayBeforeShooting = 1f;
+
+    [SerializeField]
+    private float randomTimeDeviation = 0.5f;
+
+    [SerializeField]
     private GameObject player;
 
     [SerializeField]
@@ -36,44 +42,38 @@ public class BallThrower : MonoBehaviour
 
     private bool isShooting = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //20 degres en y - direction axe z
-
-        
-        
-    }
-
     // Update is called once per frame
     void Update()
     {   
-        transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime *smoothSpeed* (1f/INTERVAL));
-        
+        if(isShooting)
+            transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime *smoothSpeed* (1f/INTERVAL));
     }
 
     public void StartShooting() {
-        isShooting = true;
-        StartCoroutine(Shoot(INTERVAL));
+        StartCoroutine(Shoot());
     }
 
     public void StopShooting() {
+        StopAllCoroutines();
         isShooting = false;
     }
 
 
 
-    IEnumerator Shoot(float interval)
+    IEnumerator Shoot()
     {   
-        while(isShooting)
+        yield return new WaitForSeconds(delayBeforeShooting);
+        while(true)
         {
+            float interval = INTERVAL + Random.Range(-randomTimeDeviation, randomTimeDeviation);
             yield return new WaitForSeconds(interval/6f);
             Quaternion lookDirection = Quaternion.LookRotation(player.transform.position - shootStart.transform.position);
             float rotateHorizontal = Random.Range(-MAX_ROTATION_Y, MAX_ROTATION_Y);
             float rotateVertical = Random.Range(-MAX_ROTATION_X, MAX_ROTATION_X);
             //Quaternion.Euler(rotateVertical, + rotateHorizontal, 0)
             target = lookDirection ;
-            
+            isShooting = true;
+
             yield return new WaitForSeconds(5f * interval /6f);
 
             //ICI JE SHOOT

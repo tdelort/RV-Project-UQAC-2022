@@ -8,7 +8,7 @@ public class Counter : MonoBehaviour
     private int score = 0;
 
     [SerializeField]
-    private TextMeshPro scoreDisplay;
+    private TMP_Text scoreDisplay;
     
     // Start is called before the first frame update
     void Start()
