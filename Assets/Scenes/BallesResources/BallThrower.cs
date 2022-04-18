@@ -65,7 +65,8 @@ public class BallThrower : MonoBehaviour
 
     IEnumerator Shoot(float interval)
     {   
-        if (isShooting) {
+        while(isShooting)
+        {
             yield return new WaitForSeconds(interval/6f);
             Quaternion lookDirection = Quaternion.LookRotation(player.transform.position - shootStart.transform.position);
             float rotateHorizontal = Random.Range(-MAX_ROTATION_Y, MAX_ROTATION_Y);
@@ -80,8 +81,8 @@ public class BallThrower : MonoBehaviour
             myBall.GetComponent<Rigidbody>().velocity = transform.TransformDirection(0,0,shootSpeed);
             myBall.GetComponent<Ball>().counter = counter;
             //transform.Rotate(rotateVertical, rotateHorizontal, 0, Space.Self);
-            StartCoroutine(Shoot(interval)); 
             //Balle : ajouter compteur dedans, destroy, if destroysans trigger increment, play sound on invoc, play sound on trigger, voir comment trigger
+            
         }
     }
 }
