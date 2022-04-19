@@ -8,7 +8,9 @@ namespace ChamboulTout
     public class BallsManager : MonoBehaviour
     {
         [SerializeField] float thresholdHeight = 1f;
-        [SerializeField] List<Transform> ballSpawnPoints = new List<Transform>();
+        [SerializeField] List<Transform> originalBalls = new List<Transform>();
+        List<Vector3> ballSpawnPointsPositions = new List<Vector3>();
+
         [SerializeField] GameObject ballPrefab;
 
         List<(GameObject, int)> balls = new List<(GameObject, int)>();
@@ -18,9 +20,10 @@ namespace ChamboulTout
         void Start()
         {
             onBallFallen.AddListener(OnBallFallen);
-            for(int i = 0; i < ballSpawnPoints.Count; i++)
+            for(int i = 0; i < originalBalls.Count; i++)
             {
-                GameObject newBall = Instantiate(ballPrefab, ballSpawnPoints[i].position, ballSpawnPoints[i].rotation);
+                GameObject newBall = originalBalls[i].gameObject;
+                ballSpawnPointsPositions.Add(originalBalls[i].position);
                 balls.Add((newBall, i));
             }
         }
@@ -28,7 +31,7 @@ namespace ChamboulTout
         void SetBall(int i)
         {
             GameObject b = balls.Find(x => x.Item2 == i).Item1;
-            b.transform.position = ballSpawnPoints[i].position;
+            b.transform.position = ballSpawnPointsPositions[i];
             b.GetComponent<Rigidbody>().velocity = Vector3.zero;
             b.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
@@ -71,7 +74,7 @@ namespace ChamboulTout
             }
 
             // Spawn new balls
-            for(int i = 0; i < ballSpawnPoints.Count; i++)
+            for(int i = 0; i < originalBalls.Count; i++)
                 SetBall(i);
         }
     }
