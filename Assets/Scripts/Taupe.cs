@@ -2,44 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Taupe : MonoBehaviour
+namespace TapeTaupe
 {
-    private Vector3 initialPosition;
-    private float time;
-
-    private void Awake()
+    public class Taupe : MonoBehaviour
     {
-        initialPosition = transform.position;
-        gameObject.SetActive(false);
-    }
+        private Vector3 initialPosition;
+        private float time;
 
-    private void OnEnable()
-    {
-        transform.position = initialPosition;
-        time = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(time < 0.1)
+        private void Awake()
         {
-            transform.localPosition = new Vector3(
-            transform.localPosition.x,
-            transform.localPosition.y + Time.deltaTime * 10,
-            transform.localPosition.z);
-            time += Time.deltaTime;
-        }
-    }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("ok");
-        if (other.CompareTag("Marteau"))
-        {
-            GetComponentInParent<GestionTaupes>().AddScore(1);
+            initialPosition = transform.position;
             gameObject.SetActive(false);
+        }
+
+        private void OnEnable()
+        {
+            transform.position = initialPosition;
+            time = 0;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (time < 0.1)
+            {
+                transform.localPosition = new Vector3(
+                transform.localPosition.x,
+                transform.localPosition.y + Time.deltaTime * 10,
+                transform.localPosition.z);
+                time += Time.deltaTime;
+            }
+        }
+
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("ok");
+            if (other.CompareTag("Marteau"))
+            {
+                GetComponentInParent<GestionTaupes>().AddScore(1);
+                gameObject.SetActive(false);
+            }
         }
     }
 }
