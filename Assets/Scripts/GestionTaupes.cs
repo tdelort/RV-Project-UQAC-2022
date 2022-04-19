@@ -2,40 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GestionTaupes : MonoBehaviour
+
+namespace TapeTaupe
 {
-    [SerializeField] private Taupe[] taupeArray;
-    [SerializeField] private int spawnMax;
-    [SerializeField] private int timeActive;
-    [SerializeField] private int timeRespawn;
-
-    private int score = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    public class GestionTaupes : MonoBehaviour
     {
-        StartCoroutine(SpanwTaupe());
-    }
+        [SerializeField] private Taupe[] taupeArray;
+        [SerializeField] private int spawnMax;
+        [SerializeField] private float timeActive;
+        [SerializeField] private float timeRespawn;
+        [SerializeField] private int startTime = 3;
+        [SerializeField] TMPro.TMP_Text scoreText;
 
-    IEnumerator SpanwTaupe()
-    {
-        for(int i = 0; i < spawnMax; i++)
+        private int score = 0;
+
+        // Start is called before the first frame update
+        IEnumerator Start()
         {
-            yield return new WaitForSeconds(timeRespawn);
-            int taupe = Random.Range(0, taupeArray.Length - 1);
-            taupeArray[taupe].gameObject.SetActive(true);
-            yield return new WaitForSeconds(timeActive);
-            taupeArray[taupe].gameObject.SetActive(false);
+            while(startTime > 0)
+            {
+                scoreText.text = "Début dans " + startTime.ToString();
+                startTime -= 1;
+                yield return new WaitForSeconds(1f);
+            }
+            scoreText.text = "0";
+            StartCoroutine(SpanwTaupe());
         }
-    }
 
-    public void AddScore(int i)
-    {
-        score += i;
-    }
+        IEnumerator SpanwTaupe()
+        {
+            for (int i = 0; i < spawnMax; i++)
+            {
+                yield return new WaitForSeconds(timeRespawn);
+                int taupe = Random.Range(0, taupeArray.Length - 1);
+                taupeArray[taupe].gameObject.SetActive(true);
+                yield return new WaitForSeconds(timeActive);
+                taupeArray[taupe].gameObject.SetActive(false);
+            }
+        }
 
-    public int GetScore()
-    {
-        return score;
+        public void AddScore(int i)
+        {
+            score += i;
+            scoreText.text = score.ToString();
+        }
+
+        public int GetScore()
+        {
+            return score;
+        }
     }
 }
