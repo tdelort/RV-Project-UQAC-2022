@@ -13,14 +13,20 @@ namespace TapeTaupe
         [SerializeField] private float timeRespawn;
         [SerializeField] private int startTime = 3;
         [SerializeField] TMPro.TMP_Text scoreText;
+        [SerializeField] GameObject hammer;
 
         private int score = 0;
         private int spawnedTaupe = 0;
+        List<Color> colorInit = new List<Color>();
 
         // Start is called before the first frame update
         IEnumerator Start()
         {
             float time = startTime;
+            foreach(Renderer render in hammer.GetComponentsInChildren<Renderer>())
+            {
+                colorInit.Add(render.material.color);
+            }
             while(time > 0)
             {
                 scoreText.text = "Début dans " + time.ToString();
@@ -100,15 +106,49 @@ namespace TapeTaupe
         }
         IEnumerator Vibration()
         {
+            int i = 0;
+            foreach (Renderer render in hammer.GetComponentsInChildren<Renderer>())
+            {
+                render.material.color = Color.green;
+            }
             OVRInput.SetControllerVibration(0.25f, 1, OVRInput.Controller.RTouch);
             yield return new WaitForSeconds(0.2f);
+            foreach (Renderer render in hammer.GetComponentsInChildren<Renderer>())
+            {
+                render.material.color = colorInit[i];
+                i++;
+            }
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
         }
 
         IEnumerator WrongVibration()
         {
+            int i = 0;
+            foreach (Renderer render in hammer.GetComponentsInChildren<Renderer>())
+            {
+                render.material.color = Color.red;
+            }
             OVRInput.SetControllerVibration(0.75f, 1, OVRInput.Controller.RTouch);
             yield return new WaitForSeconds(0.1f);
+            foreach (Renderer render in hammer.GetComponentsInChildren<Renderer>())
+            {
+                render.material.color = colorInit[i];
+                i++;
+            }
+            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+            yield return new WaitForSeconds(0.15f);
+            foreach (Renderer render in hammer.GetComponentsInChildren<Renderer>())
+            {
+                render.material.color = Color.red;
+            }
+            OVRInput.SetControllerVibration(0.75f, 1, OVRInput.Controller.RTouch);
+            yield return new WaitForSeconds(0.1f);
+            i = 0;
+            foreach (Renderer render in hammer.GetComponentsInChildren<Renderer>())
+            {
+                render.material.color = colorInit[i];
+                i++;
+            }
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
         }
     }

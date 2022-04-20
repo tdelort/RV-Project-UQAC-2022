@@ -1415,6 +1415,7 @@ MonoBehaviour:
   timeRespawn: 0.7
   startTime: 3
   scoreText: {fileID: 15116618}
+  hammer: {fileID: 109796761}
 --- !u!4 &1618801399
 Transform:
   m_ObjectHideFlags: 0
