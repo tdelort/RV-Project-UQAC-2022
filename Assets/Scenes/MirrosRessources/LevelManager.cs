@@ -7,7 +7,31 @@ namespace Labyrinthe
     public class LevelManager : MonoBehaviour
     {
         [SerializeField] TMPro.TMP_Text timeText;
+        [SerializeField] TMPro.TMP_Text endTimeText;
+        [SerializeField] Transform player;
+
         bool isStarted = false;
+        float time = 0;
+        Vector3 startPosition;
+        Quaternion startRotation;
+
+        void Start()
+        {
+            startPosition = player.position;
+            startRotation = player.rotation;
+        }
+
+        void Update()
+        {
+            if(OVRInput.GetDown(OVRInput.Button.One |
+                                OVRInput.Button.Two |
+                                OVRInput.Button.Three |
+                                OVRInput.Button.Four))
+            {
+                OnReset();
+                FindObjectOfType<StickFactory>().OnReset();
+            }
+        }
 
         void OnTriggerEnter(Collider other)
         {
@@ -26,14 +50,35 @@ namespace Labyrinthe
             }
         }
 
+        public void StopLevel()
+        {
+            StopAllCoroutines();
+            UpdateTimeTexts(time);
+        }
+
+        public void OnReset()
+        {
+            StopAllCoroutines();
+            time = 0;
+            UpdateTimeTexts(time);
+            player.position = startPosition;
+            player.rotation = startRotation;
+        }
+
+        void UpdateTimeTexts(float time)
+        {
+            timeText.text = time.ToString("0.00");
+            endTimeText.text = time.ToString("0.00");
+        }
+
         IEnumerator Timer()
         {
-            float time = 0;
+            time = 0;
             while(true)
             {
                 yield return null;
                 time += Time.deltaTime;
-                timeText.text = time.ToString("0.00");
+                UpdateTimeTexts(time);
             }
         }
     }

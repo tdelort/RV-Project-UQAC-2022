@@ -15,9 +15,12 @@ namespace Labyrinthe
         Vector3 lastPosition;
         Quaternion lastRotation;
 
+        List<GameObject> sticks = new List<GameObject>();
+
         GameObject Get()
         {
             GameObject stick = Instantiate(stickPrefab);
+            sticks.Add(stick);
             Color col = colors[Random.Range(0, colors.Length)];
             stick.GetComponent<Renderer>().material.SetColor("_EmissionColor", col);
             stick.GetComponentInChildren<Light>().color = col;
@@ -61,6 +64,15 @@ namespace Labyrinthe
                     StartCoroutine(PrepareStick());
                 }
             }
+        }
+
+        public void OnReset()
+        {
+            foreach(GameObject stick in sticks)
+            {
+                Destroy(stick);
+            }
+            sticks.Clear();
         }
     }
 }
