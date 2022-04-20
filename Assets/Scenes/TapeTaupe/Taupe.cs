@@ -6,6 +6,11 @@ namespace TapeTaupe
 {
     public class Taupe : MonoBehaviour
     {
+        [SerializeField] private float minSpeed;
+        [SerializeField] private GameObject hammer;
+
+        private Vector3 hammerSpeed;
+        private Vector3 hammerLastPosition;
         private Vector3 initialPosition;
         private float time;
 
@@ -13,6 +18,7 @@ namespace TapeTaupe
         {
             initialPosition = transform.position;
             gameObject.SetActive(false);
+            hammerLastPosition = hammer.transform.position;
         }
 
         private void OnEnable()
@@ -32,14 +38,21 @@ namespace TapeTaupe
                 transform.localPosition.z);
                 time += Time.deltaTime;
             }
+            hammerSpeed = (hammer.transform.position - hammerLastPosition) / Time.deltaTime;
+            hammerLastPosition = hammer.transform.position;
         }
 
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("ok");
             if (other.CompareTag("Marteau"))
             {
+                Debug.Log(hammerSpeed);
+                if(Mathf.Abs(hammerSpeed.y) < minSpeed)
+                {
+                    GetComponentInParent<GestionTaupes>().AddScore(0);
+                    return;
+                }
                 GetComponentInParent<GestionTaupes>().AddScore(1);
                 gameObject.SetActive(false);
             }
