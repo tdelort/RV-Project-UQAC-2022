@@ -68,11 +68,16 @@ namespace Labyrinthe
 
         public void OnReset()
         {
-            foreach(GameObject stick in sticks)
+            foreach(GameObject s in sticks)
             {
-                Destroy(stick);
+                Destroy(s);
             }
             sticks.Clear();
+
+            GameObject stick = Get();
+            stick.transform.SetParent(transform);
+            stick.transform.localPosition = Vector3.zero;
+            stick.transform.localRotation = Quaternion.identity;
         }
     }
 }

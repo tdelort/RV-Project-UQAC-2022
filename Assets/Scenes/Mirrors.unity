@@ -1096,6 +1096,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befaa30bea1e5924bb52a2026e0cf194, type: 3}
+--- !u!1 &123927300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 123927301}
+  - component: {fileID: 123927302}
+  m_Layer: 2
+  m_Name: TouchVolumes
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &123927301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123927300}
+  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: -0.0205, y: -0.0361, z: -0.049}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 33888436}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
+--- !u!136 &123927302
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123927300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.04
+  m_Height: 0.15358935
+  m_Direction: 2
+  m_Center: {x: 2.1961405e-10, y: 4.1758857e-10, z: -0.027622305}
 --- !u!1 &131135344
 GameObject:
   m_ObjectHideFlags: 0
@@ -9977,6 +10023,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 261881853625085673, guid: a0708bab0e06c414381a6861ecf05a38, type: 3}
   m_PrefabInstance: {fileID: 1109972606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1120321341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120321342}
+  - component: {fileID: 1120321343}
+  m_Layer: 2
+  m_Name: TouchVolumes
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1120321342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120321341}
+  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: 0.0205, y: -0.0361, z: -0.049}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256394586}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
+--- !u!136 &1120321343
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120321341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.04
+  m_Height: 0.15358935
+  m_Direction: 2
+  m_Center: {x: 2.1961405e-10, y: 4.1758857e-10, z: -0.027622305}
 --- !u!1001 &1123398894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10512,7 +10604,6 @@ GameObject:
   - component: {fileID: 1173023656}
   - component: {fileID: 1173023659}
   - component: {fileID: 1173023658}
-  - component: {fileID: 1173023657}
   m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
@@ -10535,20 +10626,6 @@ Transform:
   m_Father: {fileID: 1354360071}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1173023657
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173023655}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1173023658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10700,8 +10777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 634535324}
-  endTimeText: {fileID: 0}
-  player: {fileID: 0}
+  endTimeText: {fileID: 622303323}
+  player: {fileID: 1907592092}
 --- !u!65 &1193834755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15939,6 +16016,11 @@ BoxCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5904418465786783494, guid: befaa30bea1e5924bb52a2026e0cf194, type: 3}
   m_PrefabInstance: {fileID: 1551633340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1907592092 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1402132427219622944, guid: 823e69c154141524798063120f291f74, type: 3}
+  m_PrefabInstance: {fileID: 577964984}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1910160406
 PrefabInstance:

@@ -52,12 +52,18 @@ namespace Labyrinthe
 
         public void StopLevel()
         {
+            if(isStarted)
+                isStarted = false;
+
             StopAllCoroutines();
             UpdateTimeTexts(time);
         }
 
         public void OnReset()
         {
+            if(isStarted)
+                isStarted = false;
+
             StopAllCoroutines();
             time = 0;
             UpdateTimeTexts(time);
