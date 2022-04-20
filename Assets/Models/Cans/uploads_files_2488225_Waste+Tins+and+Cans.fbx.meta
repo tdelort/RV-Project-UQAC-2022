@@ -3,7 +3,37 @@ guid: 2362884840134fa4abad074077527885
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 1f75d7d339b197e4fa773d566e158123, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottom
+    second: {fileID: 2100000, guid: 1c3a5118f385bcd45a84fe13c73faa70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pepsi
+    second: {fileID: 2100000, guid: fdbbd64468676d74d88ce56b96b543ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sprite
+    second: {fileID: 2100000, guid: 8d4185724e3265a4fb34f95f95212684, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tin
+    second: {fileID: 2100000, guid: 22124a486ccfbaf418087a27459e788c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Top
+    second: {fileID: 2100000, guid: 9fd6eb8c859f3ae4b9764cc05d2a3ca0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
