@@ -29,6 +29,7 @@ public class TicketsManager : MonoBehaviour
     public static void AddTickets(int amount)
     {
         Instance.tickets += amount;
+        PlayerPrefs.SetInt("Tickets", Instance.tickets);
     }
 
     public static bool RemoveTickets(int amount)
@@ -36,6 +37,7 @@ public class TicketsManager : MonoBehaviour
         if(Instance.tickets >= amount)
         {
             Instance.tickets -= amount;
+            PlayerPrefs.SetInt("Tickets", Instance.tickets);
             return true;
         }
         return false;
@@ -48,7 +50,6 @@ public class TicketsManager : MonoBehaviour
 
     private void OnTicketsChange()
     {
-        PlayerPrefs.SetInt("Tickets", tickets);
         Menu.MenuManager menuManager = FindObjectOfType<Menu.MenuManager>();
         if(menuManager != null)
         {
