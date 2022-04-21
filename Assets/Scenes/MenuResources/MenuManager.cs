@@ -17,6 +17,7 @@ namespace Menu
         }
 
         [SerializeField] Gift[] gifts;
+        [SerializeField] TMPro.TMP_Text ticketsText;
 
         void Start()
         {
@@ -27,6 +28,7 @@ namespace Menu
             }
 
             OnResetToys();
+            OnTicketsChange();
         }
 
         public void OnBuy(int i)
@@ -42,6 +44,7 @@ namespace Menu
                     PlayerPrefs.SetInt("Gift" + i, 1);
                 }
             }
+            OnTicketsChange();
         }
 
         public void OnResetToys()
@@ -55,11 +58,17 @@ namespace Menu
                     gifts[i].obj.transform.rotation = gifts[i].spawnRotation;
                 }
             }
+            OnTicketsChange();
         }
 
         public void OnChangeScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
+        }
+
+        public void OnTicketsChange()
+        {
+            ticketsText.text = TicketsManager.GetTickets().ToString();
         }
     }
 }

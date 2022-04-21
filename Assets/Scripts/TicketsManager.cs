@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TicketsManager : MonoBehaviour
 {
     public static TicketsManager Instance;
 
-    int tickets;
+    [SerializeField] int tickets;
 
     void Awake()
     {
@@ -20,6 +21,9 @@ public class TicketsManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        tickets = PlayerPrefs.GetInt("Tickets", 0);
+        OnTicketsChange();
     }
     
     public static void AddTickets(int amount)
@@ -40,5 +44,15 @@ public class TicketsManager : MonoBehaviour
     public static int GetTickets()
     {
         return Instance.tickets;
+    }
+
+    private void OnTicketsChange()
+    {
+        PlayerPrefs.SetInt("Tickets", tickets);
+        Menu.MenuManager menuManager = FindObjectOfType<Menu.MenuManager>();
+        if(menuManager != null)
+        {
+            menuManager.OnTicketsChange();
+        }
     }
 }

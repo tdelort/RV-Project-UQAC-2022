@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Labyrinthe
 {
@@ -100,6 +101,11 @@ namespace Labyrinthe
                 time += Time.deltaTime;
                 UpdateTimeTexts(time);
             }
+        }
+
+        public void RetourAuMenu()
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 }
