@@ -57,6 +57,20 @@ namespace Labyrinthe
 
             StopAllCoroutines();
             UpdateTimeTexts(time);
+            
+            int tickets = 0;
+            if(time < 30)
+                tickets = 15;
+            else if(time < 45)
+                tickets = 12;
+            else if(time < 60)
+                tickets = 10;
+            else if(time < 120)
+                tickets = 5;
+            else 
+                tickets = 2;
+
+            TicketsManager.AddTickets(tickets);
         }
 
         public void OnReset()
