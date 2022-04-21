@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 namespace TapeTaupe
 {
@@ -40,6 +40,7 @@ namespace TapeTaupe
                 yield return new WaitForSeconds(timeActive);
                 taupeArray[taupe].gameObject.SetActive(false);
             }
+            TicketsManager.AddTickets((int) score / 2);
         }
 
         public void OnStart()
@@ -88,7 +89,7 @@ namespace TapeTaupe
 
         public void OnQuit()
         {
-            //BackToMenu
+            SceneManager.LoadScene("Menu");
         }
 
         public void AddScore(int i)
