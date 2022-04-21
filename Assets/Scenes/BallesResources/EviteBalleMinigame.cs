@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EviteBalleMinigame : MonoBehaviour
 {   
@@ -37,5 +38,24 @@ public class EviteBalleMinigame : MonoBehaviour
 
         for(int i = 0; i < ballThrower.Length; i++)
             ballThrower[i].StopShooting();
+
+        //Score gestion des tickets
     }
+
+    public void OnRetourAuMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void OnReset()
+        {
+            Debug.Log("Reset");
+            //Arret des tirs
+            for(int i = 0; i < ballThrower.Length; i++)
+                ballThrower[i].StopShooting();
+            
+            //Relancement du jeu
+            StartCoroutine(Start());
+            
+        }
 }
