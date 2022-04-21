@@ -37,6 +37,8 @@ namespace Menu
             {
                 if(TicketsManager.GetTickets() >= gifts[i].price)
                 {
+                    bool wasBought = PlayerPrefs.GetInt("Gift" + i, 0) == 1;
+                    if(wasBought) return;
                     TicketsManager.RemoveTickets(gifts[i].price);
                     gifts[i].obj.SetActive(true);
                     gifts[i].obj.transform.position = gifts[i].spawnPoint;
