@@ -25,6 +25,9 @@ public class Counter : MonoBehaviour
 
     public void Decrement(){
         score--;
+        if (score <0) {
+            score = 0;
+        }
         scoreDisplay.text = score.ToString();
     }
 
