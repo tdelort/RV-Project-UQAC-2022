@@ -4,8 +4,9 @@ using UnityEngine;
 using TMPro;
 
 public class Counter : MonoBehaviour
-{
-    private int score = 0;
+{   
+    private static int startScore = 30;
+    private int score = startScore;
 
     [SerializeField]
     private TMP_Text scoreDisplay;
@@ -22,8 +23,12 @@ public class Counter : MonoBehaviour
         
     }
 
-    public void Increment(){
-        score++;
+    public void Decrement(){
+        score--;
         scoreDisplay.text = score.ToString();
+    }
+
+    public void Reset() {
+        score = startScore;
     }
 }
