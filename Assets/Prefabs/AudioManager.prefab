@@ -44,8 +44,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee4ae83586a0b545a51e1e6c94ca993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk: []
-  throw_object: []
+  walk:
+  - name: walk_1
+    clip: {fileID: 8300000, guid: 59e135b4063d75a4f8c00b1ab3bf1328, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: walk_2
+    clip: {fileID: 8300000, guid: 6612e016373423b4894313bba5c00a39, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: walk_3
+    clip: {fileID: 8300000, guid: 6a2266adabb304d4da4fd95b304113f7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: walk_4
+    clip: {fileID: 8300000, guid: f737f61535bcb2745b309c4701ee4d8b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: walk_5
+    clip: {fileID: 8300000, guid: 61dea9fb97f2171459722295f60fe278, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  throw_ball: []
   message: []
   klaxon: []
   ui: []
