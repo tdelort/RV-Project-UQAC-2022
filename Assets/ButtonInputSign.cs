@@ -31,6 +31,9 @@ public class ButtonInputSign : MonoBehaviour
                     E.redImage.SetActive(true);
                     E.greenImage.SetActive(false);
                 }
+            } else {
+                E.greenImage.SetActive(false);
+                E.redImage.SetActive(false);
             }
         }
     }

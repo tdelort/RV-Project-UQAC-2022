@@ -257,7 +257,7 @@ MonoBehaviour:
     isGreen: 0
     greenImage: {fileID: 6831487282303270203}
     redImage: {fileID: 6831487282532868004}
-  - button: 1024
+  - button: 1264
     isGreen: 0
     greenImage: {fileID: 6831487282571538927}
     redImage: {fileID: 6831487283271503594}
@@ -269,7 +269,7 @@ MonoBehaviour:
     isGreen: 0
     greenImage: {fileID: 6831487282221343077}
     redImage: {fileID: 6831487282548225675}
-  - button: 4
+  - button: 61444
     isGreen: 0
     greenImage: {fileID: 6831487283877859224}
     redImage: {fileID: 6831487283112784968}
