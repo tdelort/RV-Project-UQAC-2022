@@ -44,6 +44,7 @@ namespace TapeTaupe
 
         public void OnStart()
         {
+            StopAllCoroutines();
             StartCoroutine(StartCorou());
         }
 
