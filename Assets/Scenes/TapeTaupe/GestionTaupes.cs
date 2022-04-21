@@ -20,21 +20,12 @@ namespace TapeTaupe
         List<Color> colorInit = new List<Color>();
 
         // Start is called before the first frame update
-        IEnumerator Start()
+        void Start()
         {
-            float time = startTime;
             foreach(Renderer render in hammer.GetComponentsInChildren<Renderer>())
             {
                 colorInit.Add(render.material.color);
             }
-            while(time > 0)
-            {
-                scoreText.text = "Début dans " + time.ToString();
-                time -= 1;
-                yield return new WaitForSeconds(1f);
-            }
-            UpdateText();
-            StartCoroutine(SpawnTaupe());
         }
 
         IEnumerator SpawnTaupe()
@@ -49,6 +40,24 @@ namespace TapeTaupe
                 yield return new WaitForSeconds(timeActive);
                 taupeArray[taupe].gameObject.SetActive(false);
             }
+        }
+
+        public void OnStart()
+        {
+            StartCoroutine(StartCorou());
+        }
+
+        private IEnumerator StartCorou()
+        {
+            float time = startTime;
+            while (time > 0)
+            {
+                scoreText.text = "Début dans " + time.ToString();
+                time -= 1;
+                yield return new WaitForSeconds(1f);
+            }
+            UpdateText();
+            StartCoroutine(SpawnTaupe());
         }
 
         public void OnReset()

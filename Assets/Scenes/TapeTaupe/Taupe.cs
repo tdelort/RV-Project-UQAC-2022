@@ -8,6 +8,7 @@ namespace TapeTaupe
     {
         [SerializeField] private float minSpeed;
         [SerializeField] private GameObject hammer;
+        [SerializeField] private ParticleSystem pouf;
 
         private Vector3 hammerSpeed;
         private Vector3 hammerLastPosition;
@@ -54,6 +55,7 @@ namespace TapeTaupe
                     return;
                 }
                 GetComponentInParent<GestionTaupes>().AddScore(1);
+                Instantiate(pouf, transform.position, transform.rotation);
                 gameObject.SetActive(false);
             }
         }
