@@ -58,6 +58,8 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         // Initialisation de tous les sons
+        foreach (Sound s in walk)
+            Initialize(s);
         foreach (Sound s in message)
             Initialize(s);
         foreach (Sound s in klaxon)
