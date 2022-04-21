@@ -42,7 +42,7 @@ namespace TapeTaupe
                 yield return new WaitForSeconds(timeActive);
                 taupeArray[taupe].gameObject.SetActive(false);
             }
-            TicketsManager.AddTickets((int) score / 2);
+            TicketsManager.AddTickets(score / 2);
         }
 
         public void OnStart()
