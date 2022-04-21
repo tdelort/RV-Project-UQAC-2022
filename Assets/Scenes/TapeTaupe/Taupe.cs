@@ -34,12 +34,12 @@ namespace TapeTaupe
         {
             if (time < 0.1)
             {
-                transform.localPosition = Vector3.Lerp(initialPosition, endPosition.position, 10*time);
+                transform.position = Vector3.Lerp(initialPosition, endPosition.position, 10*time);
                 time += Time.deltaTime;
             }
             else
             {
-                transform.localPosition = endPosition.position;
+                transform.position = endPosition.position;
             }
             hammerSpeed = (hammer.transform.position - hammerLastPosition) / Time.deltaTime;
             hammerLastPosition = hammer.transform.position;

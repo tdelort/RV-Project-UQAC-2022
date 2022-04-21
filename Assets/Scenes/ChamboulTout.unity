@@ -7068,6 +7068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 199719006}
+  bm: {fileID: 671792076}
 --- !u!1001 &2110435157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7279,15 +7280,27 @@ PrefabInstance:
     - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 671792076}
+      objectReference: {fileID: 2086598121}
     - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1536869389}
+      objectReference: {fileID: 671792076}
     - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 2086598121}
+      objectReference: {fileID: 1536869389}
+    - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChamboulTout.ScoreManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ChamboulTout.BallsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: ChamboulTout.CansManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5595886189839594986, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: m_RootOrder
       value: 1

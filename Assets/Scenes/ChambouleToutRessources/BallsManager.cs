@@ -77,5 +77,16 @@ namespace ChamboulTout
             for(int i = 0; i < originalBalls.Count; i++)
                 SetBall(i);
         }
+
+        public int NbBallsNearSpawn()
+        {
+            int nbBallsNearSpawn = 0;
+            foreach((GameObject, int) ball in balls)
+            {
+                if((ball.Item1.transform.position - ballSpawnPointsPositions[ball.Item2]).magnitude < 0.1f)
+                    nbBallsNearSpawn++;
+            }
+            return nbBallsNearSpawn;
+        }
     }
 }

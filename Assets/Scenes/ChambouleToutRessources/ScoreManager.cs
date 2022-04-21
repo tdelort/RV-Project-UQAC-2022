@@ -8,6 +8,7 @@ namespace ChamboulTout
     public class ScoreManager : MonoBehaviour
     {
         [SerializeField] TMPro.TMP_Text scoreText;
+        [SerializeField] BallsManager bm;
         int score = 0;
         public int Score 
         { 
@@ -27,11 +28,19 @@ namespace ChamboulTout
 
         public void OnReset()
         {
+            int nb = bm.NbBallsNearSpawn();
+            Debug.LogError("nb = " + nb);
+            if(nb == 0)
+                TicketsManager.AddTickets(Score);
             Score = 0;
         }
 
         public void OnRetourAuMenu()
         {
+            int nb = bm.NbBallsNearSpawn();
+            Debug.LogError("nb = " + nb);
+            if(nb == 0)
+                TicketsManager.AddTickets(Score);
             SceneManager.LoadScene("Menu");
         }
     }
