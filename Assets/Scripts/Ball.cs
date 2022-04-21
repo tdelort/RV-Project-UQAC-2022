@@ -29,7 +29,7 @@ public class Ball : MonoBehaviour
             Debug.Log("Collision with player");
             hasTriggered = true;
             impactSound.Play();
-            counter.Increment();
+            counter.Decrement();
         }
     }
 }

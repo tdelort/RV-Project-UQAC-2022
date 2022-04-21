@@ -23,17 +23,13 @@ public class ButtonInputSign : MonoBehaviour
     {
         foreach(Entry E in entries) {
             OVRInput.RawButton button = E.button;
-            if (OVRInput.Get(button)) {
-                if(E.isGreen) {
-                    E.greenImage.SetActive(true);
-                    E.redImage.SetActive(false);
-                } else {
-                    E.redImage.SetActive(true);
-                    E.greenImage.SetActive(false);
-                }
-            } else {
-                E.greenImage.SetActive(false);
+
+            if(E.isGreen) {
+                E.greenImage.SetActive(OVRInput.Get(button));
                 E.redImage.SetActive(false);
+            } else {
+                E.redImage.SetActive(OVRInput.Get(button));
+                E.greenImage.SetActive(false);
             }
         }
     }
