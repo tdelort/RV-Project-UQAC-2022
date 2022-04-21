@@ -117,6 +117,7 @@ MonoBehaviour:
   minSpeed: 2
   hammer: {fileID: 0}
   pouf: {fileID: 4268005218656264339, guid: 86e60ee59c9723d4c84c29308dead02e, type: 3}
+  endPosition: {fileID: 0}
 --- !u!1 &3089937365116274245
 GameObject:
   m_ObjectHideFlags: 0

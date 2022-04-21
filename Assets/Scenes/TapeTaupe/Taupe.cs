@@ -9,6 +9,7 @@ namespace TapeTaupe
         [SerializeField] private float minSpeed;
         [SerializeField] private GameObject hammer;
         [SerializeField] private ParticleSystem pouf;
+        [SerializeField] private Transform endPosition;
 
         private Vector3 hammerSpeed;
         private Vector3 hammerLastPosition;
@@ -33,11 +34,12 @@ namespace TapeTaupe
         {
             if (time < 0.1)
             {
-                transform.localPosition = new Vector3(
-                transform.localPosition.x,
-                transform.localPosition.y + Time.deltaTime * 10,
-                transform.localPosition.z);
+                transform.localPosition = Vector3.Lerp(initialPosition, endPosition.position, 10*time);
                 time += Time.deltaTime;
+            }
+            else
+            {
+                transform.localPosition = endPosition.position;
             }
             hammerSpeed = (hammer.transform.position - hammerLastPosition) / Time.deltaTime;
             hammerLastPosition = hammer.transform.position;
