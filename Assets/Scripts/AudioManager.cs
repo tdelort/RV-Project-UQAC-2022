@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
 
     // Les listes des différents sons et musiques
     public Sound[] walk;
-    public Sound[] throw_object;
+    public Sound[] throw_ball;
     public Sound[] message;
     public Sound[] klaxon;
     public Sound[] ui;
@@ -80,39 +80,6 @@ public class AudioManager : MonoBehaviour
     //----------------------------------------------------------------
     //            LES FONCTIONS PUBLIQUES DE SON EN LOCAL
     //----------------------------------------------------------------
-
-    /*
-    Dictionary<String, float> default_volume = new Dictionary<String, float>(){
-        {"partying_muffled", 1f},
-        {"partying_less_muffled", 0.6f},
-        {"partying_least_muffled", 0.3f},
-        {"partying", 0.2f}
-    };
-
-    public void PlayPartyMusic(string name) {
-        Sound s = Array.Find(music, sound => sound.name == name);
-        if(!s.source.isPlaying)
-        {
-            StopMusics();
-            PlayMusic("partying_muffled");
-            PlayMusic("partying_less_muffled");
-            PlayMusic("partying_least_muffled");
-            PlayMusic("partying");
-        }
-        foreach(var v in default_volume)
-        {
-            Sound snd = Array.Find(music, sound => sound.name == v.Key);
-            if(v.Key == name)
-            {
-                snd.source.volume = v.Value * SessionInformations.Instance.volumeMusic;
-            }
-            else
-            {
-                snd.source.volume = 0f;
-            }
-        }
-    }
-    */
 
     // PlayMusic : joue localement la musique name
     public void PlayMusic(string name) {
@@ -213,7 +180,7 @@ public class AudioManager : MonoBehaviour
             case SoundType.WALK:
                 return walk;
             case SoundType.THROW:
-                return throw_object;
+                return throw_ball;
             case SoundType.MESSAGE:
                 return message;
             case SoundType.KLAXON:
