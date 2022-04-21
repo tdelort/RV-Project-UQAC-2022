@@ -43,6 +43,7 @@ public class EviteBalleMinigame : MonoBehaviour
             ballThrower[i].StopShooting();
 
         //Score gestion des tickets
+        TicketsManager.AddTickets(counter.GetScore()/2);
     }
 
     public void OnRetourAuMenu()
