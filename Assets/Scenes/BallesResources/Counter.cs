@@ -33,5 +33,6 @@ public class Counter : MonoBehaviour
 
     public void Reset() {
         score = startScore;
+        scoreDisplay.text = score.ToString();
     }
 }
