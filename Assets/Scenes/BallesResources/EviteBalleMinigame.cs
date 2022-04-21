@@ -50,6 +50,7 @@ public class EviteBalleMinigame : MonoBehaviour
     public void OnReset()
         {
             Debug.Log("Reset");
+            StopAllCoroutines();
             //Arret des tirs
             for(int i = 0; i < ballThrower.Length; i++)
                 ballThrower[i].StopShooting();
