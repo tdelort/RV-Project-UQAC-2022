@@ -5918,7 +5918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1402132427219622944, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.736
+      value: -1.391
       objectReference: {fileID: 0}
     - target: {fileID: 1402132427219622944, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5947,6 +5947,22 @@ PrefabInstance:
     - target: {fileID: 1402132427219622944, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: Speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: RotationAngle
+      value: 22.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: HMDRotatesPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: EnableLinearMovement
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1402132427219622974, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_Name

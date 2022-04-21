@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace TireCarabine
 {
@@ -33,6 +34,11 @@ namespace TireCarabine
         public void OnReset()
         {
             Score = 0;
+        }
+
+        public void OnRetourAuMenu()
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 }

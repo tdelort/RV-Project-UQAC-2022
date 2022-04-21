@@ -4418,17 +4418,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 074bb4dd1dfb0c442ad175f02a07eb84, type: 2}
     - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 671792076}
+      objectReference: {fileID: 2086598121}
     - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1536869389}
+      objectReference: {fileID: 2086598121}
     - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 2086598121}
+    - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnRetourAuMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChamboulTout.ScoreManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595886189839594984, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
+      propertyPath: onPress.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ChamboulTout.ScoreManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5595886189839594986, guid: ff8ac7806b4736a44838de62e42e071c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7230,6 +7246,22 @@ PrefabInstance:
     - target: {fileID: 1402132427219622944, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: Speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: RotationAngle
+      value: 22.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: HMDRotatesPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402132427219622973, guid: 823e69c154141524798063120f291f74, type: 3}
+      propertyPath: EnableLinearMovement
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1402132427219622974, guid: 823e69c154141524798063120f291f74, type: 3}
       propertyPath: m_Name
