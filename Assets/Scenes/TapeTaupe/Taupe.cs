@@ -21,13 +21,13 @@ namespace TapeTaupe
             initialPosition = transform.position;
             gameObject.SetActive(false);
             hammerLastPosition = hammer.transform.position;
-            GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.BOING, string.Empty, transform.position);
         }
 
         private void OnEnable()
         {
             transform.position = initialPosition;
             time = 0;
+            GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.BOING, string.Empty, transform.position);
         }
 
         // Update is called once per frame
