@@ -12732,6 +12732,7 @@ MonoBehaviour:
   - {fileID: 1595575207}
   - {fileID: 1683898776}
   timerDisplay: {fileID: 1095152642}
+  counter: {fileID: 1651082025}
 --- !u!4 &1358957426
 Transform:
   m_ObjectHideFlags: 0

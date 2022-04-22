@@ -78,6 +78,7 @@ namespace TireCarabine
                     target.GetComponent<Target>().Init(row.endPoint, row.speed, row.score, this);
                 }
             }
+            TicketsManager.AddTickets(scoreManager.Score / 5);
         }
 
         public void OnReset()

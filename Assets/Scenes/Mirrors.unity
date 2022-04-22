@@ -4798,6 +4798,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 823e69c154141524798063120f291f74, type: 3}
+--- !u!1 &577964985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1402132427219622974, guid: 823e69c154141524798063120f291f74, type: 3}
+  m_PrefabInstance: {fileID: 577964984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &583671133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10948,7 +10953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8324540651504673886, guid: 794ed7b5577920c4e87a9252c0cbf1f4, type: 3}
       propertyPath: m_text
-      value: Utilisez un des boutons sous un de vos pousse (A B X Y) pour revenir
+      value: Utilisez un des boutons sous un de vos pouce (A B X Y) pour revenir
         ici
       objectReference: {fileID: 0}
     - target: {fileID: 8324540652045691384, guid: 794ed7b5577920c4e87a9252c0cbf1f4, type: 3}
@@ -16227,6 +16232,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1402132427219622944, guid: 823e69c154141524798063120f291f74, type: 3}
   m_PrefabInstance: {fileID: 577964984}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1907592093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577964985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7a09178b0c67d4ba365b1ae8deb128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1910160406
 PrefabInstance:
   m_ObjectHideFlags: 0

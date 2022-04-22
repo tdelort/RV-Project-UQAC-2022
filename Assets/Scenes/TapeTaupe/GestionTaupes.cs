@@ -13,6 +13,7 @@ namespace TapeTaupe
         [SerializeField] private float timeRespawn;
         [SerializeField] private int startTime = 3;
         [SerializeField] TMPro.TMP_Text scoreText;
+        [SerializeField] TMPro.TMP_Text taupeText;
         [SerializeField] GameObject hammer;
 
         private int score = 0;
@@ -33,6 +34,7 @@ namespace TapeTaupe
             for (int i = 0; i < spawnMax; i++)
             {
                 yield return new WaitForSeconds(timeRespawn);
+                taupeText.text = "Taupes restantes : " + (spawnMax - 1 - i).ToString();
                 int taupe = Random.Range(0, taupeArray.Length - 1);
                 taupeArray[taupe].gameObject.SetActive(true);
                 spawnedTaupe += 1;
@@ -40,12 +42,14 @@ namespace TapeTaupe
                 yield return new WaitForSeconds(timeActive);
                 taupeArray[taupe].gameObject.SetActive(false);
             }
-            TicketsManager.AddTickets((int) score / 2);
+            TicketsManager.AddTickets(score / 2);
         }
 
         public void OnStart()
         {
             StopAllCoroutines();
+            score = 0;
+            spawnedTaupe = 0;
             StartCoroutine(StartCorou());
         }
 
@@ -58,6 +62,7 @@ namespace TapeTaupe
                 time -= 1;
                 yield return new WaitForSeconds(1f);
             }
+            taupeText.text = "Taupes restantes : " + spawnMax.ToString();
             UpdateText();
             StartCoroutine(SpawnTaupe());
         }

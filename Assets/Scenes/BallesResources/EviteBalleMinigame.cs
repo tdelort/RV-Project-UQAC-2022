@@ -14,6 +14,9 @@ public class EviteBalleMinigame : MonoBehaviour
     [SerializeField]
     private TMPro.TMP_Text timerDisplay;
 
+    [SerializeField]
+    private Counter counter;
+
 
     IEnumerator Start()
     {
@@ -40,6 +43,7 @@ public class EviteBalleMinigame : MonoBehaviour
             ballThrower[i].StopShooting();
 
         //Score gestion des tickets
+        TicketsManager.AddTickets(counter.GetScore()/2);
     }
 
     public void OnRetourAuMenu()
@@ -54,7 +58,7 @@ public class EviteBalleMinigame : MonoBehaviour
             //Arret des tirs
             for(int i = 0; i < ballThrower.Length; i++)
                 ballThrower[i].StopShooting();
-            
+            counter.Reset();
             //Relancement du jeu
             StartCoroutine(Start());
             
