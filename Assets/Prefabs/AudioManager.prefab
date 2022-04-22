@@ -240,13 +240,13 @@ MonoBehaviour:
   ui:
   - name: high_pop
     clip: {fileID: 8300000, guid: b3dc3f7e3ca8c3241887ace0f5a97353, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: low_pop
     clip: {fileID: 8300000, guid: 7748858e2c6529349a3edb3f5dd7afda, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
