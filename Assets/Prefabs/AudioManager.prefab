@@ -75,8 +75,105 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  throw_ball: []
-  message: []
-  klaxon: []
+  boing:
+  - name: boing_1
+    clip: {fileID: 8300000, guid: 8e7b1b55036b6b343bfa646ec3a602c9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: boing_2
+    clip: {fileID: 8300000, guid: a73f9835e2b8e8548857164ad3a5b213, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: boing_3
+    clip: {fileID: 8300000, guid: 1bfd4b797a6d7ea40b85d24c16026ec3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: boing_4
+    clip: {fileID: 8300000, guid: c917ed36cf1dd984f9827733af6a6010, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: boing_5
+    clip: {fileID: 8300000, guid: e09d6f4d080db254486dab95e8812f74, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  bonk:
+  - name: bonk_1
+    clip: {fileID: 8300000, guid: 67234e4a5cce5434a9e2f6f184f6a596, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bonk_2
+    clip: {fileID: 8300000, guid: 54aee66b2b7362d40a20b0c86ab58784, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bonk_3
+    clip: {fileID: 8300000, guid: f344bd7d2261a2e48aaf8dbb8ce4f16c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bonk_4
+    clip: {fileID: 8300000, guid: 90bc411abd8535f4abace7631dc16d0f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bonk_5
+    clip: {fileID: 8300000, guid: b109c675926bdf940ac7517350b82c33, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  shoot:
+  - name: shoot_1
+    clip: {fileID: 8300000, guid: b993ceb94a4b70e409a07424971b7b5f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: shoot_2
+    clip: {fileID: 8300000, guid: c50c97b012e89d14997c5cbd4b0a97bf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: shoot_3
+    clip: {fileID: 8300000, guid: 6cbae865228d51d4fb97aa6c5659f051, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  target:
+  - name: target_1
+    clip: {fileID: 8300000, guid: 7c8dc5b46edd2f34c83a92f3f06c85c6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: target_2
+    clip: {fileID: 8300000, guid: 9865b4c0b9fa6094da4330a99a244041, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: target_3
+    clip: {fileID: 8300000, guid: ad0bd9be711ae1d46b18421d9dc1fe2b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   ui: []
   music: []

@@ -35,6 +35,7 @@ namespace TireCarabine
             if(collision.gameObject.tag == "Ball")
             {
                 manager.onTargetHit.Invoke(score);
+                AudioManager.instance.PlaySoundAt(AudioManager.SoundType.TARGET, string.Empty, transform.position);
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
             }

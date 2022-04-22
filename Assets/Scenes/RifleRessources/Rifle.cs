@@ -38,6 +38,7 @@ namespace TireCarabine
 
             OVRInput.SetControllerVibration(0.25f, 1, OVRInput.Controller.LTouch);
             OVRInput.SetControllerVibration(0.25f, 1, OVRInput.Controller.RTouch);
+            AudioManager.instance.PlaySoundAt(AudioManager.SoundType.SHOOT, string.Empty, transform.position);
             yield return new WaitForSeconds(Mathf.Min(0.1f, cooldown));
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
             OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);

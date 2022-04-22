@@ -23,18 +23,20 @@ public class AudioManager : MonoBehaviour
     // Tous les types de sons accessibles
     public enum SoundType {
         WALK,
-        THROW,
-        MESSAGE,
-        KLAXON,
+        BOING,
+        BONK,
+        SHOOT,
+        TARGET,
         UI,
         MUSIC
     }
 
     // Les listes des différents sons et musiques
     public Sound[] walk;
-    public Sound[] throw_ball;
-    public Sound[] message;
-    public Sound[] klaxon;
+    public Sound[] boing;
+    public Sound[] bonk;
+    public Sound[] shoot;
+    public Sound[] target;
     public Sound[] ui;
     public Sound[] music;
 
@@ -59,10 +61,6 @@ public class AudioManager : MonoBehaviour
 
         // Initialisation de tous les sons
         foreach (Sound s in walk)
-            Initialize(s);
-        foreach (Sound s in message)
-            Initialize(s);
-        foreach (Sound s in klaxon)
             Initialize(s);
         foreach (Sound s in ui)
             Initialize(s);
@@ -181,16 +179,16 @@ public class AudioManager : MonoBehaviour
         {
             case SoundType.WALK:
                 return walk;
-            case SoundType.THROW:
-                return throw_ball;
-            case SoundType.MESSAGE:
-                return message;
-            case SoundType.KLAXON:
-                return klaxon;
+            case SoundType.BOING:
+                return boing;
+            case SoundType.BONK:
+                return bonk;
+            case SoundType.SHOOT:
+                return shoot;
+            case SoundType.TARGET:
+                return target;
             case SoundType.UI:
                 return ui;
-            case SoundType.MUSIC:
-                return music;
             default:
                 Debug.LogWarning("No array matches SounType : sending walk as default");
                 return walk;
