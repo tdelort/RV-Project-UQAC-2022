@@ -30,6 +30,7 @@ public class BallEmitter : MonoBehaviour
 
         GameObject ball = Instantiate(ballPrefab, randomPointInBounds, Quaternion.identity);
         ball.GetComponent<Rigidbody>().velocity = transform.TransformDirection(fireDirection) * ballSpeed;
+        GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.SHOOT, string.Empty, transform.position);
     }
 
 }

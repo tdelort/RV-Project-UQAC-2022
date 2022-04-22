@@ -28,7 +28,7 @@ public class Ball : MonoBehaviour
         {
             Debug.Log("Collision with player");
             hasTriggered = true;
-            impactSound.Play();
+            GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.BONK, string.Empty, transform.position);
             counter.Decrement();
         }
     }
