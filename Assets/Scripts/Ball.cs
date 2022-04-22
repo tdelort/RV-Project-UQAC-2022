@@ -16,6 +16,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
+        GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.SHOOT, string.Empty, transform.position);
         yield return new WaitForSeconds(destructionTime);
         Destroy(gameObject);
     }
