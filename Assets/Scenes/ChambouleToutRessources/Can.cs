@@ -11,6 +11,7 @@ namespace ChamboulTout
             if(collision.gameObject.tag == "Ball")
             {
                 //TODO : play sound
+                GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.SHORT_CAN, string.Empty, transform.position);
             }
         }
     }

@@ -10178,6 +10178,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1703754299606699126, guid: 2912d7098b355084a9c601c6c9767ba8, type: 3}
+      propertyPath: short_can.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8770796600131609132, guid: 2912d7098b355084a9c601c6c9767ba8, type: 3}
       propertyPath: m_Name
       value: AudioManager

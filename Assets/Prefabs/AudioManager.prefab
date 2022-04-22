@@ -175,5 +175,79 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  ui: []
+  short_can:
+  - name: short_can_1
+    clip: {fileID: 8300000, guid: e4b098ef862756a498fbde5473c15889, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: short_can_2
+    clip: {fileID: 8300000, guid: e279237652d44dc4a8462ecebd2a1036, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: short_can_3
+    clip: {fileID: 8300000, guid: fd1d7d8bb2a211a4ead609b07d543ba0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: short_can_4
+    clip: {fileID: 8300000, guid: 08e55f9a0c78db443b7dd24d850134b5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: short_can_5
+    clip: {fileID: 8300000, guid: e30a87d2c7e93a445b8c88c942b59b03, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: short_can_6
+    clip: {fileID: 8300000, guid: 8403b0db068986143a2926c7cdcedee2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: short_can_7
+    clip: {fileID: 8300000, guid: 3fee5b4dd6f0d0d4cbb47aa37a47c406, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  long_can:
+  - name: long_can_1
+    clip: {fileID: 8300000, guid: 978a58618cb28744194ced26b85101c7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: long_can_2
+    clip: {fileID: 8300000, guid: 1f1c29c8ed452324bbce0f0a29f1ba2f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: long_can_3
+    clip: {fileID: 8300000, guid: 0f502cdbe07018045a49bac666186fd9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  ui:
+  - name: high_pop
+    clip: {fileID: 8300000, guid: b3dc3f7e3ca8c3241887ace0f5a97353, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: low_pop
+    clip: {fileID: 8300000, guid: 7748858e2c6529349a3edb3f5dd7afda, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   music: []

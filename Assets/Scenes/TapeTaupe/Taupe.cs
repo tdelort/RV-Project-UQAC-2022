@@ -21,7 +21,7 @@ namespace TapeTaupe
             initialPosition = transform.position;
             gameObject.SetActive(false);
             hammerLastPosition = hammer.transform.position;
-            AudioManager.instance.PlaySoundAt(AudioManager.SoundType.BOING, string.Empty, transform.position);
+            GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.BOING, string.Empty, transform.position);
         }
 
         private void OnEnable()
@@ -58,7 +58,7 @@ namespace TapeTaupe
                     return;
                 }
                 GetComponentInParent<GestionTaupes>().AddScore(1);
-                AudioManager.instance.PlaySoundAt(AudioManager.SoundType.BONK, string.Empty, transform.position);
+                GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.BONK, string.Empty, transform.position);
                 Instantiate(pouf, transform.position, transform.rotation);
                 gameObject.SetActive(false);
             }

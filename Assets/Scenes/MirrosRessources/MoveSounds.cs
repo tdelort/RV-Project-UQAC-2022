@@ -11,7 +11,7 @@ public class MoveSounds : MonoBehaviour
         float distSinceLastFrame = (transform.position - lastPosTicked).magnitude;
         if (distSinceLastFrame >= distanceBetweenSteps) 
         {
-            AudioManager.instance.PlaySound(AudioManager.SoundType.WALK, string.Empty);
+            GameAudioManager.instance.PlaySound(GameAudioManager.SoundType.WALK, string.Empty);
             lastPosTicked = transform.position;
         }
     }

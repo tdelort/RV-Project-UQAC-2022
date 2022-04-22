@@ -27,6 +27,7 @@ namespace ChamboulTout
                 if(can.transform.position.y < thresholdHeight)
                 {
                     cansThatFell.Add(can);
+                    GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.LONG_CAN, string.Empty, can.transform.position);
                 }
             }
             

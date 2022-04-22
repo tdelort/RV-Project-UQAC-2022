@@ -14,6 +14,7 @@ namespace ChamboulTout
             if(other.gameObject.tag == "Player")
             {
                 onPress.Invoke();
+                GameAudioManager.instance.PlaySoundAt(GameAudioManager.SoundType.UI, "low_pop", transform.position);
             }
         }
     }

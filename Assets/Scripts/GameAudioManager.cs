@@ -18,7 +18,7 @@ public class Sound {
     public AudioSource source;
 }
 
-public class AudioManager : MonoBehaviour
+public class GameAudioManager : MonoBehaviour
 {
     // Tous les types de sons accessibles
     public enum SoundType {
@@ -27,6 +27,8 @@ public class AudioManager : MonoBehaviour
         BONK,
         SHOOT,
         TARGET,
+        SHORT_CAN,
+        LONG_CAN,
         UI,
         MUSIC
     }
@@ -37,12 +39,14 @@ public class AudioManager : MonoBehaviour
     public Sound[] bonk;
     public Sound[] shoot;
     public Sound[] target;
+    public Sound[] short_can;
+    public Sound[] long_can;
     public Sound[] ui;
     public Sound[] music;
 
     
 
-    public static AudioManager instance;
+    public static GameAudioManager instance;
     Vector3 offset;
     float camAngle = 60f;
     float dist = 12f;
@@ -118,6 +122,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void OnReset() {
+        PlaySound(SoundType.UI, "low_pop");
+    }
+
     // StopSound : arrête localement le son name de type type
     public void StopSound(SoundType type, string name) {
         foreach (Sound s in getTab(type)) {
@@ -187,6 +195,10 @@ public class AudioManager : MonoBehaviour
                 return shoot;
             case SoundType.TARGET:
                 return target;
+            case SoundType.SHORT_CAN:
+                return short_can;
+            case SoundType.LONG_CAN:
+                return long_can;
             case SoundType.UI:
                 return ui;
             default:
